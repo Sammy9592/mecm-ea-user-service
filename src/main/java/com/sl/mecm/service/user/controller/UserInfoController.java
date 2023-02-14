@@ -29,6 +29,7 @@ public class UserInfoController {
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Mono<ResponseEntity<JSONObject>> getUserAccountInfoByUsername(@RequestBody String content){
+        log.info("receive request:" + content);
         JSONObject contentJson = JSON.parseObject(content);
         String username = contentJson.getString("username");
         return userService.getUserAccountInfoByName(username)

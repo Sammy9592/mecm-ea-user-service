@@ -15,6 +15,7 @@
 
     <properties>
         <mecm-commons.version>1.0.0-SNAPSHOT</mecm-commons.version>
+        <mecm-auth-intercptor.version>1.0.0-SNAPSHOT</mecm-auth-intercptor.version>
     </properties>
 
     <dependencies>
@@ -22,6 +23,11 @@
             <groupId>com.sl.mecm.core</groupId>
             <artifactId>mecm-commons</artifactId>
             <version>${mecm-commons.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sl.mecm.core</groupId>
+            <artifactId>mecm-auth-intercptor</artifactId>
+            <version>${mecm-auth-intercptor.version}</version>
         </dependency>
     </dependencies>
 

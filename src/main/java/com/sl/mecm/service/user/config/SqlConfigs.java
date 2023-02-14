@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource(value = {"configs/sqls.properties"})
+@PropertySource(value = {"classpath:configs/sqls.properties"})
 public class SqlConfigs {
 
     @Value("${query-UserAccountInfo-by-name}")
@@ -14,15 +14,8 @@ public class SqlConfigs {
     @Value("${query-UserAccountInfo-by-id}")
     private String queryUserAccountInfoById;
 
-    @Value("${query-user-credential-by-name}")
-    private String queryUserCredentialByName;
-
     public String getQueryUserAccountInfoByName() {
         return queryUserAccountInfoByName;
-    }
-
-    public String getQueryUserCredentialByName() {
-        return queryUserCredentialByName;
     }
 
     public String getQueryUserAccountInfoById() {

@@ -4,11 +4,13 @@ logging:
     root: info
 
 server:
-  port: 8020
-  servlet:
-    context-path: /api
+  port: 8021
+#  servlet:
+#    context-path: /api
 
 spring:
+  webflux:
+    base-path: /api
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/MECM
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -23,5 +25,9 @@ spring:
 
 # noinspection undefined
 mecm:
+  auth:
+    token:
+      entitlement: |
+        {"authType":"SEA","source":"user-service","sessionToken":""}
   user:
     base-path: /user
